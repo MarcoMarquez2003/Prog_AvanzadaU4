@@ -1,0 +1,84 @@
+@primary-color: #007bff;
+@secondary-color: #6c757d;
+@light-bg-color: #f8f9fa;
+@dark-bg-color: #343a40;
+@hover-scale: 1.05;
+@border-radius: 12px;
+@card-padding: 20px;
+@transition-duration: 0.3s;
+@shadow-light: 0 2px 5px rgba(0, 0, 0, 0.05);
+@shadow-heavy: 0 8px 15px rgba(0, 0, 0, 0.1);
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: @light-bg-color;
+}
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid lighten(@light-bg-color, 20%);
+    box-shadow: @shadow-light;
+    .navbar-brand {
+        font-weight: bold;
+        color: @primary-color;
+        &:hover {
+            color: darken(@primary-color, 5%);
+        }
+    }
+    .nav-link {
+        color: @dark-bg-color;
+        font-weight: 500;
+        &:hover {
+            color: darken(@primary-color, 10%);
+        }
+    }
+}
+
+// Sidebar
+.sidebar {
+    background-color: white;
+    border-radius: @border-radius;
+    box-shadow: @shadow-light;
+    h4 {
+        color: @primary-color;
+        margin-bottom: 20px;
+    }
+    .list-group-item {
+        background-color: transparent;
+        cursor: pointer;
+        &:hover {
+            background-color: lighten(@light-bg-color, 5%);
+        }
+    }
+}
+.product-card {
+    border: none;
+    border-radius: @border-radius;
+    overflow: hidden;
+    box-shadow: @shadow-heavy;
+    transition: transform @transition-duration ease, box-shadow @transition-duration ease;
+    
+    &:hover {
+        transform: scale(@hover-scale);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-body {
+        padding: @card-padding;
+        background-color: white;
+        border-top: 1px solid lighten(@light-bg-color, 20%);
+    }
+    
+    .price {
+        color: @primary-color;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .btn-primary {
+        background-color: @primary-color;
+        border-color: @primary-color;
+        color: white;
+        &:hover {
+            background-color: darken(@primary-color, 5%);
+        }
+    }
+}
