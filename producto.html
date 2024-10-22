@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #productCarousel {
+            width: 250px; /* Ancho del carrusel */
+            height: 250px; /* Alto del carrusel */
+            overflow: hidden; /* Esconde el desbordamiento */
+        }
+
+        .carousel-item img {
+            width: 100%; /* Asegura que las imágenes ocupen el ancho completo */
+            height: 100%; /* Asegura que las imágenes ocupen el alto completo */
+            object-fit: cover; /* Mantiene la proporción y cubre el área disponible */
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="text-center">Detalles del Producto</h1>
+        
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="cocacola.jfif" class="d-block" alt="Coca Cola">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="fanta.jfif" class="d-block" alt="Fanta">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="fantafresa.jfif" class="d-block" alt="Fanta Fresa">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h5 class="fw-bold">Descripción del Producto</h5>
+                <p>Esta es una excelente bebida refrescante ideal para cualquier ocasión. Disfruta de su sabor único y calidad inigualable.</p>
+                <p class="h4 text-primary">$19.99</p>
+                <button class="btn btn-primary">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h5 class="fw-bold">Detalles Adicionales</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Contenido</td>
+                        <td>355 ml</td>
+                    </tr>
+                    <tr>
+                        <td>Calorías</td>
+                        <td>140</td>
+                    </tr>
+                    <tr>
+                        <td>Sabor</td>
+                        <td>Refrescante</td>
+                    </tr>
+                    <tr>
+                        <td>Origen</td>
+                        <td>USA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

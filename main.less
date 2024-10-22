@@ -55,18 +55,18 @@ body {
     overflow: hidden;
     box-shadow: @shadow-heavy;
     transition: transform @transition-duration ease, box-shadow @transition-duration ease;
-    
+
     &:hover {
         transform: scale(@hover-scale);
         box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
     }
-    
+
     .card-body {
         padding: @card-padding;
         background-color: white;
         border-top: 1px solid lighten(@light-bg-color, 20%);
     }
-    
+
     .price {
         color: @primary-color;
         font-weight: bold;
@@ -82,3 +82,4 @@ body {
         }
     }
 }
+
