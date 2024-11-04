@@ -52,9 +52,9 @@
 
 				$_SESSION['user_data'] = $response->data;
 
-				header("Location: ../home.php");
+				header("Location: /PROG_AVANZADAU4/home.php");
 			}else{
-				header("Location: ../index.html");
+				header("Location: /PROG_AVANZADAU4/index.html");
 			}
 
 		}

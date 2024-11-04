@@ -3,6 +3,7 @@ include_once "app/ProductsController.php";
 
 $productsController = new ProductsController();
 $productos = array_reverse($productsController->get());
+$brands = $productsController->getBrands(); 
 ?>
 
 <!DOCTYPE html>
@@ -111,6 +112,17 @@ $productos = array_reverse($productsController->get());
                         <div class="mb-3">
                             <label for="features" class="form-label">Características</label>
                             <input type="text" name="features" required class="form-control" id="features">
+                        </div>
+                        <div class="mb-3">
+                            <label for="brand" class="form-label">Marca</label>
+                            <select name="brand" class="form-select" id="brand" required>
+                                <option value="">Seleccione una marca</option>
+                                <?php if (isset($brands) && count($brands)): ?>
+                                    <?php foreach ($brands as $brand): ?>
+                                        <option value="<?= $brand->id ?>"><?= $brand->name ?></option>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="cover" class="form-label">Subir Imagen</label>
